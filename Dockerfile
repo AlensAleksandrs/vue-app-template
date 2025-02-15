@@ -23,5 +23,8 @@ COPY --from=build-stage /app/dist .
 # Expose port 80 for HTTP traffic
 EXPOSE 80
 
+# Remove default entrypoint
+ENTRYPOINT []
+
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
